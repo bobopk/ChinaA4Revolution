@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/TimeMapper2/precache-manifest.1501a82a6387e3ac0b4bb69846340b0f.js"
+  "/TimeMapper2/precache-manifest.9d01b06a85f343d9e5755a54941ec1c1.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tm"});

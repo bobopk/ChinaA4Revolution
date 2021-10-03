@@ -44,7 +44,7 @@ export default {
     }
   },
   mounted () {
-    this.timeline = new Timeline('timeline', this.docId)
+    this.timeline = new Timeline('timeline', this.docId, { sheets_proxy: ''})
     this.timeline.on('loaded', () => {
       this.timelineLoaded = true
       let numSlides = this.timeline._storyslider.data.events.length
