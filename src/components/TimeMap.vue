@@ -4,25 +4,33 @@
     <div id="mapDiv">
     <l-map v-if="timelineLoaded" ref="map" style="height: 100%; width: 100%" :zoom="zoom" :center="center">
       <l-tile-layer :url="baseLayer.url" :attribution="baseLayer.attribution"></l-tile-layer>
-      <l-marker @click="changeSlide(pos_id)" v-for="(pos, pos_id) in positions" :key="pos_id" :lat-lng="pos"></l-marker>
+      <l-marker
+        v-for="(pos, pos_id) in positions"
+        :key="pos_id"
+        :lat-lng="pos"
+        @click="changeSlide(pos_id)">
+        </l-marker>
     </l-map>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+interface genericObject {[key: string]: any}
+interface leafletEvent extends CustomEvent {
+  unique_id: any
+}
 
-// eslint-disable-next-line
+import { defineComponent } from 'vue'
 import { Timeline } from '@knight-lab/timelinejs'
+import 'leaflet/dist/leaflet.css'
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import '@knight-lab/timelinejs/dist/css/timeline.css'
-import "leaflet/dist/leaflet.css"
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import { LMap, LTileLayer, LMarker } from "vue2-leaflet";
-import 'leaflet-defaulticon-compatibility';
+import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet"
 
-export default {
+export default defineComponent({
   name: 'TimeMap',
-  components: { LMap, 
+  components: { LMap,
                 'l-tile-layer': LTileLayer,
                 LMarker
                 },
@@ -31,11 +39,11 @@ export default {
   },
   data () {
     return {
-      timeline: {},
+      timeline: {} as genericObject,
       timelineLoaded: false,
       zoom: 10,
       center: [],
-      positions: {},
+      positions: {} as genericObject,
       baseLayer: {
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         attribution:
@@ -51,29 +59,30 @@ export default {
       let firstSlideId = ''
       for (let i = 0; i < numSlides; ++i) {
         let slide = this.timeline.getData(i)['Location_Original'].split(',').map(Number)
-        if (i == 0) 
-          firstSlideId = this.timeline.getSlide(i).data.unique_id
+        if (i == 0) firstSlideId = this.timeline.getSlide(i).data.unique_id
         this.positions[this.timeline.getSlide(i).data.unique_id] = slide
       }
       this.center = this.positions[firstSlideId]
     })
 
-    this.timeline.on('change', (ev) => {
+    this.timeline.on('change', (ev: leafletEvent) => {
       this.changeMapPoint(ev)
     })
   },
 
   methods: {
-    changeMapPoint (ev) {
+    changeMapPoint (ev: leafletEvent) {
+      console.log(this.$refs.map)
       if (this.$refs.map) {
-        this.$refs.map.mapObject.flyTo(this.positions[ev.unique_id])
+        const leafletMap = this.$refs.map as genericObject
+        leafletMap.leafletObject.flyTo(this.positions[ev.unique_id])
       }
     },
-    changeSlide (pos_id) {
+    changeSlide (pos_id: string | number) {
       this.timeline.goToId(pos_id)
     }
   }
-}
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -97,14 +106,14 @@ a {
   height: 100%;
 }
 
-#timeline {
+:deep(#timeline) {
   height: 100%;
   min-height: 100%;
   width: 70%;
   float: left;
 }
 
-#mapDiv {
+:deep(#mapDiv) {
   height: 100%;
   width: 30%;
   float: right;
