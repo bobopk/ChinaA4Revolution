@@ -58,9 +58,17 @@ export default defineComponent({
       let numSlides = this.timeline._storyslider.data.events.length
       let firstSlideId = ''
       for (let i = 0; i < numSlides; ++i) {
-        let slide = this.timeline.getData(i)['Location_Original'].split(',').map(Number)
+        let slidePosition = [] 
+        let slideData = this.timeline.getData(i)
+        if ('lat' in slideData && 'lon' in slideData) {
+          slidePosition = [slideData['lat'], slideData['lon']]
+        } else if ('Location_Original' in slideData) {
+          slidePosition = slideData['Location_Original'].split(',').map(Number)
+        } else if ('Location' in slideData) {
+          slidePosition = slideData['Location'].split(',').map(Number)
+        }
         if (i == 0) firstSlideId = this.timeline.getSlide(i).data.unique_id
-        this.positions[this.timeline.getSlide(i).data.unique_id] = slide
+        this.positions[this.timeline.getSlide(i).data.unique_id] = slidePosition
       }
       this.center = this.positions[firstSlideId]
     })

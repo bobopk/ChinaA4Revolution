@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <TimeMap docId="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6AquASDUv_4AsotubJ4gchyrEGKuk8ZAeANJFOrvE4OToeW0tgFhXTQtsAfccU1UyV6d8a200LfCb/pubhtml"/>
+    <TimeMap docId="https://docs.google.com/spreadsheets/u/1/d/1V94J2fN9bAA6mSw_o1cIOVsP7EYOdn2jQChshGRCi3M/pub?output=csv"/>
   </div>
 </template>
 
