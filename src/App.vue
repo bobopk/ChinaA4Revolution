@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <TimeMap docId="https://docs.google.com/spreadsheets/u/1/d/1V94J2fN9bAA6mSw_o1cIOVsP7EYOdn2jQChshGRCi3M/pub?output=csv"/>
+    <router-view />
   </div>
 </template>
 
@@ -10,8 +10,12 @@ import TimeMap from './components/TimeMap.vue'
 
 export default defineComponent({
   name: 'home',
+  props: ["docId"],
   components: {
     TimeMap
+  },
+  mounted () {
+    console.log('HERE', this.docId, this.$route.params)
   }
 })
 </script>

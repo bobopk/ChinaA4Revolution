@@ -14,7 +14,9 @@
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
-    "vue": "^3.2.29"
+    "timelinejs": "aivuk/TimelineJS3",
+    "vue": "^3.2.29",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

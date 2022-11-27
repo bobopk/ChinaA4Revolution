@@ -25,7 +25,7 @@ import { defineComponent } from 'vue'
 import { Timeline } from '@knight-lab/timelinejs'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
-import '@knight-lab/timelinejs/dist/css/timeline.css'
+import 'timelinejs/dist/css/timeline.css'
 import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet"
 
 export default defineComponent({
@@ -43,6 +43,7 @@ export default defineComponent({
       timelineLoaded: false,
       zoom: 10,
       center: [],
+      docURL: '',
       positions: {} as genericObject,
       baseLayer: {
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -52,7 +53,9 @@ export default defineComponent({
     }
   },
   mounted () {
-    this.timeline = new Timeline('timeline', this.docId, { sheets_proxy: ''})
+    this.docURL = this.$route.query.url
+    console.log(this.docURL, 'DOC ID')
+    this.timeline = new Timeline('timeline', this.docURL, { sheets_proxy: ''})
     this.timeline.on('loaded', () => {
       this.timelineLoaded = true
       let numSlides = this.timeline._storyslider.data.events.length
