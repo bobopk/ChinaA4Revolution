@@ -22,11 +22,12 @@ interface leafletEvent extends CustomEvent {
 }
 
 import { defineComponent } from 'vue'
-import { Timeline } from '@knight-lab/timelinejs'
+import { Timeline } from 'timelinejs'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'timelinejs/dist/css/timeline.css'
 import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet"
+import {CSV_URL} from "@/main";
 
 export default defineComponent({
   name: 'TimeMap',
@@ -53,9 +54,9 @@ export default defineComponent({
     }
   },
   mounted () {
-    this.docURL = this.$route.query.url
-    console.log(this.docURL, 'DOC ID')
-    this.timeline = new Timeline('timeline', this.docURL, { sheets_proxy: ''})
+
+    console.log('DOC ID',CSV_URL  )
+    this.timeline = new Timeline('timeline',CSV_URL, { sheets_proxy: ''})
     this.timeline.on('loaded', () => {
       this.timelineLoaded = true
       let numSlides = this.timeline._storyslider.data.events.length
