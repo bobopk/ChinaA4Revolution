@@ -1,0 +1,15 @@
+﻿Title,Start,Description,Place,Media,Tags,End,Location,Media Caption,Media Credit,Source,Source URL,Web Page
+xinjaing,"December 1, 2022",Textual description.,"London, England",http://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lejeune_-_Bataille_de_Marengo.jpg/200px-Lejeune_-_Bataille_de_Marengo.jpg,student,,"51.5073219,-0.1276474",,,,,
+"Title [REQUIRED]
+
+Note this row contains INSTRUCTIONS. You MUST DELETE THIS ROW in your real spreadsheet!","December 14, 2022",Textual description.,"Paris, Texas",,,"end date
+
+only relevant if this a period rather than single point in time)","Machine readable form of Place. Must be either GeoJSON or in following format:
+
+latitude, longitude
+
+e.g.
+37.5, -122
+
+We have also included in row below a google docs formula which will automatically look up the latitude and longitude for you. (See http://schoolofdata.org/2013/02/19/geocoding-part-ii-geocoding-data-in-a-google-docs-spreadsheet/ for details!)",Caption for the media item (optional even if you have a media item),Credit for the media (optional even if you have the media),Source name/title,Source url,Web page for this event
+,,,"Manchester, England",,,,"53.4794892,-2.2451148",,,,,
