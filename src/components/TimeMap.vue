@@ -27,7 +27,6 @@ import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 import 'timelinejs/dist/css/timeline.css'
 import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet"
-import {CSV_URL} from "@/main";
 
 export default defineComponent({
   name: 'TimeMap',
@@ -44,7 +43,7 @@ export default defineComponent({
       timelineLoaded: false,
       zoom: 10,
       center: [],
-      docURL: '',
+      docURL: import.meta.env.VITE_CSV_URL,
       positions: {} as genericObject,
       baseLayer: {
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -54,9 +53,7 @@ export default defineComponent({
     }
   },
   mounted () {
-
-    console.log('DOC ID',CSV_URL  )
-    this.timeline = new Timeline('timeline',CSV_URL, { sheets_proxy: ''})
+    this.timeline = new Timeline('timeline',this.docURL, { sheets_proxy: ''})
     this.timeline.on('loaded', () => {
       this.timelineLoaded = true
       let numSlides = this.timeline._storyslider.data.events.length
