@@ -1,15 +1,5 @@
 ﻿Title,Start,Description,Place,Media,Tags,End,Location,Media Caption,Media Credit,Source,Source URL,Web Page
-xinjaing,"December 1, 2022",Textual description.,"London, England",http://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lejeune_-_Bataille_de_Marengo.jpg/200px-Lejeune_-_Bataille_de_Marengo.jpg,student,,"51.5073219,-0.1276474",,,,,
-"Title [REQUIRED]
-
-Note this row contains INSTRUCTIONS. You MUST DELETE THIS ROW in your real spreadsheet!","December 14, 2022",Textual description.,"Paris, Texas",,,"end date
-
-only relevant if this a period rather than single point in time)","Machine readable form of Place. Must be either GeoJSON or in following format:
-
-latitude, longitude
-
-e.g.
-37.5, -122
-
-We have also included in row below a google docs formula which will automatically look up the latitude and longitude for you. (See http://schoolofdata.org/2013/02/19/geocoding-part-ii-geocoding-data-in-a-google-docs-spreadsheet/ for details!)",Caption for the media item (optional even if you have a media item),Credit for the media (optional even if you have the media),Source name/title,Source url,Web page for this event
-,,,"Manchester, England",,,,"53.4794892,-2.2451148",,,,,
+北京四通桥,"October 13, 2022","2022年10月13日发生在北京市四通桥四通桥上的一起抗议行动。
+当日，一名抗议者在该桥挂起两条横幅并播放扩音设备，公开反对时任https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E6%9C%80%E9%AB%98%E9%A0%98%E5%B0%8E%E4%BA%BAhttps://zh.wikipedia.org/wiki/%E4%B9%A0%E8%BF%91%E5%B9%B3，称其为“https://zh.wikipedia.org/wiki/%E5%B0%8D%E7%BF%92%E8%BF%91%E5%B9%B3%E7%9A%84%E8%B2%A0%E9%9D%A2%E7%A8%B1%E5%91%BC”，同时焚烧轮胎燃起浓烟以吸引路人注意。抗议者提出了罢免习近平的https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E4%B8%AD%E5%A4%AE%E5%A7%94%E5%91%98%E4%BC%9A%E6%80%BB%E4%B9%A6%E8%AE%B0等职务、普选https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%B8%BB%E5%B8%AD、叫停https://zh.wikipedia.org/wiki/%E6%B8%85%E9%9B%B6%E6%94%BF%E7%AD%96等诉求。此后https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%AD%A6%E5%AF%9F赶到现场将其逮捕，并对现场进行了清理。","北京,四通桥",http://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Lejeune_-_Bataille_de_Marengo.jpg/200px-Lejeune_-_Bataille_de_Marengo.jpg,people,,"39.965203450000004,116.31366888879072",,,,,
+广东广州海珠区,"November 14, 2022",2022年11月14日晚间，在广东省广州市海珠区康乐村等多个城中村中，有大量以湖北籍务工者为主的人士走上街头抗议封控政策，据视频画面显示，有警车被几人合力推翻,,,,,"23.0859958,113.3119935",,,,,
+,,,,,,,,,,,,
