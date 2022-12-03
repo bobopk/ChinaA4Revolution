@@ -1,46 +1,12 @@
-# TimeMapper2
+我整理了最近几天国内各地的抗争，做了一些可视化，可以在地图上查看哪些地方有人在抗争，抗争的你并不孤单。
 
-This template should help get you started developing with Vue 3 in Vite.
+时间线的展示，希望让整件事不被信息洪流冲散，不再那么快被遗忘。
 
-## Recommended IDE Setup
+网页地址（目前还没被墙）：  https://chinaa4revolution.4everland.app
+网页IPFS地址： bafybeidqqtddpwegglrxv2jfqer7hhecfnmmtrddw4mtrphppelmt2te24
+仓库地址： https://github.com/bobopk/ChinaA4Revolution
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Note： 
+- 目前信源主要是爬取的Twitter [李老师不是你老师](https://twitter.com/whyyoutouzhele)
+- 其他信源的信息还在整理
+- 视频展示还有些问题，正在修复
