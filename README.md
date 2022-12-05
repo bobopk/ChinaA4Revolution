@@ -1,7 +1,11 @@
+# 白纸革命 地图/时间线
 本项目旨在使 *白纸革命 中*各种视频和图片以时间线展示，希望让整件事不被信息洪流冲散，不再那么快被遗忘。
 
 以及可以在地图上查看哪些地方有人在抗争，抗争的你并不孤单。
+![https://chinaa4revolution.4everland.store/10d56af3f17a8cb7.png](https://chinaa4revolution.4everland.store/10d56af3f17a8cb7.png)
 
+![https://chinaa4revolution.4everland.store/2fc695487570cabe.png](https://chinaa4revolution.4everland.store/2fc695487570cabe.png)
+![https://chinaa4revolution.4everland.store/fff1187af61723c7.png](https://chinaa4revolution.4everland.store/fff1187af61723c7.png)
 网页地址:
 - [https://chinaa4revolution.4everland.app](https://chinaa4revolution.4everland.app)   （目前还没被墙）
 
